@@ -1,0 +1,101 @@
+Mutation ID	DNA Change	Type	Consequences
+b83d66dc-cf9a-505c-a1f0-85e9f690055f	chr17:g.7674957delG	Deletion	Frameshift TP53 Q192Sfs*55
+b85dc333-482e-5d17-8d4e-707ecdcfba54	chr17:g.7676584G>A	Substitution	Missense TP53 P4L
+b8738c0c-fc1f-539c-ba28-8712d28fe288	chr17:g.7676010_7676011insTAAG	Insertion	Stop Gained TP53 K120Tfs*2
+b89b1472-0d24-55cc-8056-845107ffd677	chr17:g.7676536G>C	Substitution	Stop Gained TP53 S20*
+b8a0ab27-977d-5db2-977d-263677e352ad	chr17:g.7673253A>C	Substitution	Intron TP53
+b8cdfc52-cccb-5611-8211-c8159ac4869b	chr17:g.7675100_7675101insCC	Insertion	Frameshift TP53 E171Gfs*4
+b8f37c9e-4522-54b3-8e51-cfcec735aa25	chr17:g.7675128_7675129insGGC	Insertion	Inframe Insertion TP53 A161du
+b92c20ea-2a5a-589c-be53-1afa022492e0	chr17:g.7670659G>C	Substitution	Synonymous TP53 L350=
+b9399333-6e88-54fb-80f5-d5df0b726a1b	chr17:g.7673571C>G	Substitution	Missense TP53 K319N
+b9b2f7c6-0c60-5c1b-81ab-07a8b11ed929	chr17:g.7673539A>C	Substitution	Missense TP53 L330R
+ba4be26d-c4fa-55eb-a773-b5f233ab259d	chr17:g.7676179G>T	Substitution	Missense TP53 P64T
+bb287714-9338-53b5-9ac7-0be5fa86f766	chr17:g.7676245delC	Deletion	Frameshift TP53 D42Ifs*2
+bb3e2450-7d59-5601-8a54-d057548bd5da	chr17:g.7674899delGTGTT	Deletion	Frameshift TP53 N210Ffs*4
+bb57a03e-f5cb-5e0c-96fe-ea29502446b3	chr17:g.7675086A>C	Substitution	Missense TP53 C176G
+bbdd913e-a9f8-5a54-9042-c45e1db16af3	chr17:g.7670669G>A	Substitution	Missense TP53 A347V
+bc4c5e1c-3bd3-5a0e-96bc-1a79fb5e95ff	chr17:g.7675128T>A	Substitution	Missense TP53 I162F
+bc765d9a-6860-54be-97af-d154e6d4a0b4	chr17:g.7676059_7676060insGT	Insertion	Frameshift TP53 Q104Tfs*20
+bcc0b4ec-47f3-5aa6-8eee-39c8aa31ed13	chr17:g.7675230delGGGAGTAC…	Deletion	Splice Acceptor TP53 X126_splice
+bd381c69-3dcd-5e8e-b015-6cfd924798b1	chr17:g.7670703C>T	Substitution	Missense TP53 E336K
+bd6fce35-ab68-5ab4-8969-787b77719dd3	chr17:g.7675196delT	Deletion	Frameshift TP53 K139Rfs*31
+bda5f2e9-3cc4-513a-81d3-65fcc33453a1	chr17:g.7674213G>A	Substitution	Synonymous TP53 P250=
+bdcffeab-b745-5d7d-bc1d-ed81872aeff3	chr17:g.7674269T>A	Substitution	Missense TP53 I232F
+bf192a6f-38e4-5f72-a8a3-2a2b2106267b	chr17:g.7676042G>A	Substitution	Synonymous TP53 F109=
+bf5a0449-b6c4-535e-9287-5c7000b7803d	chr17:g.7676047delCGT	Deletion	Frameshift TP53 Y107Cfs*16
+bfc4801f-6e8f-5c12-bb1a-fae81973d810	chr17:g.7676002_7676003insC	Insertion	Frameshift TP53 T123Dfs*26
+c00dc2be-108e-5a28-8493-d2e9d01c3e8d	chr17:g.7676038delGAC	Deletion	Inframe Deletion TP53 R110del
+c01178ff-8578-5fe2-936d-fe12a75bce41	chr17:g.7675200C>G	Substitution	Missense TP53 A138P
+c05d2728-d8ed-560d-8957-74f30c731d01	chr17:g.7673753delGAG	Deletion	Frameshift TP53 L289Sfs*16
+c107c6de-3a3f-5367-9b43-c98be9b9d9a0	chr17:g.7673794_7673795insACAA	Insertion	Frameshift TP53 A276Lfs*31
+c2035322-5027-575b-98a4-ce5a78aeef0d	chr17:g.7676045A>C	Substitution	Synonymous TP53 G108=
+c304af52-9292-5569-a730-a7d91a908c3c	chr17:g.7674198_7674199insATA	Insertion	Inframe Insertion TP53 I255du
+c3cdd1f9-d0e1-5161-9c6b-09690e68691b	chr17:g.7675126delGATGGC	Deletion	Inframe Deletion TP53 A161_I162del
+c3dd0824-d44e-5733-97cf-7fa7412938bd	chr17:g.7676227C>T	Substitution	Missense TP53 D48N
+c41dca1a-a28a-5ab2-ab7e-66875208f163	chr17:g.7670714A>G	Substitution	Missense TP53 I332T
+c454d133-e1c3-5e26-a634-65917155656d	chr17:g.7676046delCC	Deletion	Frameshift TP53 G108Ffs*40
+c4af0f21-8f5e-5cd9-8ace-d5fb844723fc	chr17:g.7673809delCAAAGC	Deletion	Inframe Deletion TP53 S269_E271...
+c4c8fd82-c8f8-5c05-87cb-b6c8284e2334	chr17:g.7676071delGGGAAGGG…	Deletion	Frameshift TP53 V97Efs*48
+c5517738-bce2-56c4-bf04-a505de9cb27c	chr17:g.7673586G>A	Substitution	Synonymous TP53 S314=
+c5a786f9-5d5b-5950-bbbf-40f1f53700fb	chr17:g.7675138delGCGGACGC…	Deletion	Frameshift TP53 P152Rfs*22
+c6390c8e-d42d-52f1-b5ef-4716f0713966	chr17:g.7670678delAGCTCTCG	Deletion	Frameshift TP53 R342Efs*2
+c6fcf40e-11c5-5c79-96ae-b78a8de2c9e4	chr17:g.7676037_7676038insG	Insertion	Frameshift TP53 L111Pfs*38
+c73f1e2d-5137-545d-a11b-5aa355a547f4	chr17:g.7675224_7675225insGGCA	Insertion	Frameshift TP53 L130Cfs*20
+c7a7a4d4-8c60-598e-b21f-91b577f44693	chr17:g.7676079A>T	Substitution	Missense TP53 V97D
+c7ecb046-b710-587f-b692-c483a1eaa77d	chr17:g.7670686G>A	Substitution	Synonymous TP53 F341=
+c83d2125-5caa-58de-a994-b30e32798088	chr17:g.7676185C>T	Substitution	Missense TP53 E62K
+c8a0a15d-f7f7-53d2-855f-11e53f301584	chr17:g.7676263delGCAAGGGG…	Deletion	Splice Acceptor TP53 X33_splice
+c8b4581a-4d36-5335-8b8d-1ae6febc0505	chr17:g.7676007G>T	Substitution	Missense TP53 S121Y
+c8c86f78-521c-5751-a915-98f04eaac6e8	chr17:g.7673824C>G	Substitution	Missense TP53 G266R
+c8f3ba47-06a7-58ed-a2c1-f9bd34961164	chr17:g.7674857A>C	Substitution	Splice Donor TP53 X224_splice
+c90545b0-9e63-5789-9a2e-6c7647c7fef3	chr17:g.7675210A>T	Substitution	Missense TP53 F134L
+c94a18d5-ccd4-523d-871b-89b97c178822	chr17:g.7676163_7676164insC	Insertion	Frameshift TP53 A69Gfs*80
+ca5ba010-3a40-585a-8ddd-f8d177c97f17	chr17:g.7675140delGGACGCG	Deletion	Frameshift TP53 R156Afs*12
+cad51c81-0e3d-595d-82a8-d50dcbda27b0	chr17:g.7675125_7675126insGAT	Insertion	Inframe Insertion TP53 I162du
+cad57945-af14-5197-8097-3fa4d5daa0b3	chr17:g.7675069delGC	Deletion	Frameshift TP53 R181Lfs*4
+caeff9a4-ddbd-5ebc-9d42-f10c207feba0	chr17:g.7675152_7675153insG	Insertion	Frameshift TP53 G154Rfs*27
+cb02160a-de82-5b6c-9a22-16a474d034b2	chr17:g.7675203delGTT	Deletion	Inframe Deletion TP53 Q136del
+cb935850-23fa-5325-84bc-269c0b37dd74	chr17:g.7670665C>A	Substitution	Missense TP53 L348F
+cb9ee225-0a59-5c1e-976e-cf241ad63a2f	chr17:g.7674953delTGCTG	Deletion	Frameshift TP53 Q192Sfs*15
+cbdd01d4-5cc7-5deb-ad4b-1ad63c715081	chr17:g.7675213delC	Deletion	Frameshift TP53 M133Ifs*37
+ccb6a2e1-9f2f-5bde-a687-3e8adcb8be0a	chr17:g.7670707C>A	Substitution	Synonymous TP53 G334=
+ccc2972a-5f42-55d9-9471-1d02ccc37ac4	chr17:g.7670697_7670698insGCGCT	Insertion	Frameshift TP53 F338Sfs*9
+cd1d0b78-6bab-52d8-9701-bf781a7021c7	chr17:g.7675190C>A	Substitution	Missense TP53 C141F
+cd217124-2d0b-50c9-a760-a32ba61f4e60	chr17:g.7674921C>G	Substitution	Missense TP53 E204Q
+cdf91469-6df2-5a58-8546-b060d36029c4	chr17:g.7676113delC	Deletion	Frameshift TP53 A86Hfs*37
+cec2daf9-784e-5b90-a513-fcdbed613009	chr17:g.7669659delAGGT	Deletion	Frameshift TP53 T377Pfs*44
+cf1ad4ca-a42b-5f81-b357-343026c72562	chr17:g.7675200C>T	Substitution	Missense TP53 A138T
+d01f4031-96ea-5c5b-8f28-b64d3d62c7da	chr17:g.7673825C>G	Substitution	Synonymous TP53 L265=
+d0787425-9714-5b21-ae2a-1291f27803fb	chr17:g.7676376delCCTTAC	Deletion	Splice Donor TP53 X32_splice
+d11ad0f3-4b63-5b12-95ca-ec9448f61b77	chr17:g.7676020delCAGAATGC…	Deletion	Frameshift TP53 F113Dfs*31
+d17b8e53-e2f2-5d9d-aa76-e7a45d0f7677	chr17:g.7674172delGCTCCTGA…	Deletion	Splice Donor TP53 X261_splice
+d1cba6fe-b8ba-5bfa-8fc4-a93e63b29a09	chr17:g.7673552_7673553insTCCA	Insertion	Frameshift TP53 E326Wfs*12
+d1e5e755-b781-5eaf-91d9-9128532654db	chr17:g.7674888delTATGTCGA…	Deletion	Inframe Deletion TP53 T211_H214del
+d2d7e4f8-b5fd-598a-a11b-3ce9a541ac30	chr17:g.7674183delG	Deletion	Frameshift TP53 S261Vfs*84
+d2e132a0-7e08-5ecb-a06c-f7f2dbbcab82	chr17:g.7673582_7673583insA	Insertion	Frameshift TP53 P316Sfs*21
+d390001e-df66-58f9-9a55-38b4203e78ae	chr17:g.7673751C>T	Substitution	Missense TP53 R290H
+d422f5a7-2f07-51f7-bb92-5032a0c54712	chr17:g.7676078G>A	Substitution	Synonymous TP53 V97=
+d479ff18-be7f-5dc5-b8cd-768d55e9d0d3	chr17:g.7674212T>A	Substitution	Missense TP53 I251F
+d49d6bb1-4eba-56c3-827e-ed0f30a33f08	chr17:g.7673756_7673757insT	Insertion	Frameshift TP53 N288Kfs*18
+d4baa01c-cd8e-5067-944c-3d8cc82a7322	chr17:g.7675075A>T	Substitution	Missense TP53 H179Q
+d4c4e2b7-d9ee-5478-b034-dba6bcf86fe1	chr17:g.7673564delGTTTCTTC…	Deletion	Frameshift TP53 S315Ffs*15
+d58028f9-af90-53ee-86c5-987e923968a0	chr17:g.7676026delG	Deletion	Frameshift TP53 H115Ifs*8
+d69f3a45-2ac1-5b71-9065-f9c61e02b21d	chr17:g.7673273C>A	Substitution	Intron TP53
+d71fc159-2aac-5a29-a8c4-cde16fe52447	chr17:g.7674900T>C	Substitution	Missense TP53 T211A
+d74433b4-39b3-5e8a-b84e-176756b2d797	chr17:g.7674854delCAGACCTC…	Deletion	Splice Donor TP53 X220_splice
+d7648480-37ef-503a-99e7-07fb7b111ce1	chr17:g.7673601delG	Deletion	Frameshift TP53 N310Tfs*35
+d7b3838c-574c-5b36-b366-7a44fc9d46b6	chr17:g.7673832delTT	Deletion	Frameshift TP53 N263Sfs*8
+d7ff5aad-4e6e-5573-a667-bfc9d4dc3c14	chr17:g.7674963G>T	Substitution	Missense TP53 P190T
+d90d4bf0-c8a6-5709-ad44-b789828b58d4	chr17:g.7670686G>C	Substitution	Missense TP53 F341L
+d93d1b7d-baa8-5ebb-ac6a-4a0b14503178	chr17:g.7673785C>G	Substitution	Missense TP53 G279R
+d963641b-2f5c-5e81-a5b9-4de3d42a05fb	chr17:g.7674205G>A	Substitution	Missense TP53 T253I
+d9c60bf2-7079-5e32-9acb-6673a25f5d48	chr17:g.7673825C>T	Substitution	Synonymous TP53 L265=
+d9dfc9ed-a857-5aad-8e8f-c1014842b7b4	chr17:g.7674250delC	Deletion	Frameshift TP53 C238Lfs*9
+d9f69809-c191-5f8f-9f9a-c41d8526c6df	chr17:g.7674887_7674888insT	Insertion	Frameshift TP53 S215Kfs*7
+da3342aa-483e-5ef4-84c8-abf0ed056e84	chr17:g.7675211A>G	Substitution	Missense TP53 F134S
+da35a81b-78bf-5403-b77d-089200ce9299	chr17:g.7673606delGT	Deletion	Frameshift TP53 L308Afs*28
+da89f274-7deb-5b39-a704-35c44d416e35	chr17:g.7674251A>C	Substitution	Missense TP53 C238G
+dabdd78c-ff36-5a2e-9a68-7735065f452b	chr17:g.7676179delGA	Deletion	Frameshift TP53 P64Qfs*84
+dae9c17e-9020-5454-a666-2ecac8f0a7b8	chr17:g.7675058delCTAT	Deletion	Frameshift TP53 D184Afs*62
+db07f807-c6f8-59d8-980f-cb6670a6fe97	chr17:g.7675079T>G	Substitution	Missense TP53 H178P
+db77cb04-d0b0-5dda-85ca-d4df8d681c97	chr17:g.7673827_7673828insT	Insertion	Frameshift TP53 L265Tfs*7
