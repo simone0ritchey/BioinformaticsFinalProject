@@ -31,7 +31,7 @@ for (i in 1:nrow(heatmap_data)) {
 
 # Make heatmaps for each domain
 library(pheatmap)
-all <- pheatmap(t(heatmap_data), show_colnames = T, show_rownames = T)
+all <- pheatmap(t(heatmap_data), show_colnames = T, show_rownames = T,)
 # remove dna binding sight
 w_o_dna_binding <- pheatmap(t(heatmap_data)[-1,], show_colnames = T, show_rownames = T)
 
@@ -110,10 +110,13 @@ for (i in 1:length(unique(diseases$id))) {
 }
 
 # couldn't make a heatmap, so making barplot instead
-barplot(t(heatmap_data3), main = "Number of Diseases Associated with each Mutation")
+barplot(t(heatmap_data3), main = "Number of Diseases Associated with each Mutation", axisnames = F, xlab = "Mutations", ylab = "Number of Diseases Caused by Mutation", sub = "Total Number of Mutations = 1269")
 
 #how many are only associated with one?
-sum(heatmap_data3[,1] == 1)
+sum(heatmap_data3[,1] > 1)
+501/(501+768)
+
+
 
 # number of diseases associated with mutations vs. what domain they occur in
 actual_heatmap_data3 <- matrix(0,nrow = length(unique(diseases$id)), ncol = ncol(heatmap_data))
@@ -130,6 +133,11 @@ for (i in 1:nrow(actual_heatmap_data3)) {
 
 pheatmap(t(actual_heatmap_data3), show_colnames = F, show_rownames = T)
 
+sum(actual_heatmap_data3[,"Tetramerisation"] > 7)
 
-
+# selecting the mutations in the DNA-binding and Tetramerization Domain that are associated with 8 or more diseases
+subseted_actual_heatmap3 <- actual_heatmap_data3[,c(1,2)]
+keep <- rownames(subseted_actual_heatmap3[subseted_actual_heatmap3[,1] > 7,])
+keep <- append(keep, rownames(subseted_actual_heatmap3[subseted_actual_heatmap3[,2] > 7,]))
+mutations_of_interest <- filter(diseases, id %in% keep)
 
