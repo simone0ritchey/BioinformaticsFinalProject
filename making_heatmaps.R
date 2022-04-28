@@ -110,13 +110,17 @@ for (i in 1:length(unique(diseases$id))) {
 }
 
 # couldn't make a heatmap, so making barplot instead
-barplot(t(heatmap_data3), main = "Number of Diseases Associated with each Mutation", axisnames = F, xlab = "Mutations", ylab = "Number of Diseases Caused by Mutation", sub = "Total Number of Mutations = 1269")
+barplot(heatmap_data3, main = "Number of Diseases Associated with each Mutation", axisnames = F, xlab = "Mutations", ylab = "Number of Diseases Caused by Mutation", sub = "Total Number of Mutations = 1269")
 
 #how many are only associated with one?
-sum(heatmap_data3[,1] > 1)
-501/(501+768)
-
-
+new_barplot <- matrix(nrow = 10,ncol = 1)
+rownames(new_barplot) <- c(1:10)
+colnames(new_barplot) <- c("no_mutations","count")
+for (i in 1:nrow(new_barplot)) {
+  new_barplot[i,1] <- sum(heatmap_data3[,1] == rownames(new_barplot)[i])
+}
+barplot(t(new_barplot), ylab = "Mutation Count", xlab = "Number of Diseases Associated with each Mutation", main = "Fewer Mutations are Associated with Many Diseases", sub = "Total Number of Diseases = 14")
+ncol(heatmap_4)
 
 # number of diseases associated with mutations vs. what domain they occur in
 actual_heatmap_data3 <- matrix(0,nrow = length(unique(diseases$id)), ncol = ncol(heatmap_data))
@@ -130,14 +134,33 @@ for (i in 1:nrow(actual_heatmap_data3)) {
     }
   }
 }
-
 pheatmap(t(actual_heatmap_data3), show_colnames = F, show_rownames = T)
-
-sum(actual_heatmap_data3[,"Tetramerisation"] > 7)
+pheatmap(t(actual_heatmap_data3[,-1]), show_colnames = F, show_rownames = T)
+  # can the groupings be explained by the amount of mutations in the domain?
+sum(actual_heatmap_data3[,"DNA-Binding"] == 10)
 
 # selecting the mutations in the DNA-binding and Tetramerization Domain that are associated with 8 or more diseases
 subseted_actual_heatmap3 <- actual_heatmap_data3[,c(1,2)]
 keep <- rownames(subseted_actual_heatmap3[subseted_actual_heatmap3[,1] > 7,])
 keep <- append(keep, rownames(subseted_actual_heatmap3[subseted_actual_heatmap3[,2] > 7,]))
 mutations_of_interest <- filter(diseases, id %in% keep)
+
+# mutation versus disease heatmap
+heatmap_4 <- matrix(0,nrow = length(unique(diseases$id)),ncol = nrow(heatmap_data))
+rownames(heatmap_4) <- unique(diseases$id)
+colnames(heatmap_4) <- rownames(heatmap_data)
+for (i in 1:nrow(heatmap_4)) {
+  for (j in 1:ncol(heatmap_4)) {
+    filtered_data <- filter(diseases, id == rownames(heatmap_4)[i])
+    if (colnames(heatmap_4)[j] %in% filtered_data$disease) {
+      heatmap_4[i,j] <- heatmap_4[i,j] + 1
+    }
+  }
+}
+
+pheatmap(t(heatmap_4), show_colnames = F, show_rownames = T, annotation =  )
+
+?pheatmap()
+
+
 
