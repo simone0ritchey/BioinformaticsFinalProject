@@ -110,10 +110,17 @@ for (i in 1:length(unique(diseases$id))) {
 }
 
 # couldn't make a heatmap, so making barplot instead
-barplot(t(heatmap_data3), main = "Number of Diseases Associated with each Mutation")
+barplot(heatmap_data3, main = "Number of Diseases Associated with each Mutation", axisnames = F, xlab = "Mutations", ylab = "Number of Diseases Caused by Mutation", sub = "Total Number of Mutations = 1269")
 
 #how many are only associated with one?
-sum(heatmap_data3[,1] == 1)
+new_barplot <- matrix(nrow = 10,ncol = 1)
+rownames(new_barplot) <- c(1:10)
+colnames(new_barplot) <- c("no_mutations","count")
+for (i in 1:nrow(new_barplot)) {
+  new_barplot[i,1] <- sum(heatmap_data3[,1] == rownames(new_barplot)[i])
+}
+barplot(t(new_barplot), ylab = "Mutation Count", xlab = "Number of Diseases Associated with each Mutation", main = "Fewer Mutations are Associated with Many Diseases", sub = "Total Number of Diseases = 14")
+ncol(heatmap_4)
 
 # number of diseases associated with mutations vs. what domain they occur in
 actual_heatmap_data3 <- matrix(0,nrow = length(unique(diseases$id)), ncol = ncol(heatmap_data))
@@ -127,16 +134,42 @@ for (i in 1:nrow(actual_heatmap_data3)) {
     }
   }
 }
+pheatmap(t(actual_heatmap_data3[,-1]), show_colnames = F, show_rownames = T)
+# can the groupings be explained by the amount of mutations in the domain?
+sum(actual_heatmap_data3[,"DNA-Binding"] == 10)
 
-pheatmap(t(actual_heatmap_data3), show_colnames = F, show_rownames = T)
+# selecting the mutations in the DNA-binding and Tetramerization Domain that are associated with 8 or more diseases
+subseted_actual_heatmap3 <- actual_heatmap_data3[,c(1,2)]
+keep <- rownames(subseted_actual_heatmap3[subseted_actual_heatmap3[,1] > 7,])
+keep <- append(keep, rownames(subseted_actual_heatmap3[subseted_actual_heatmap3[,2] > 7,]))
+mutations_of_interest <- filter(diseases, id %in% keep)
+
+# mutation versus disease heatmap
+heatmap_4 <- matrix(0,nrow = length(unique(diseases$id)),ncol = nrow(heatmap_data))
+rownames(heatmap_4) <- unique(diseases$id)
+colnames(heatmap_4) <- rownames(heatmap_data)
+for (i in 1:nrow(heatmap_4)) {
+  for (j in 1:ncol(heatmap_4)) {
+    filtered_data <- filter(diseases, id == rownames(heatmap_4)[i])
+    if (colnames(heatmap_4)[j] %in% filtered_data$disease) {
+      heatmap_4[i,j] <- heatmap_4[i,j] + 1
+    }
+  }
+}
+
+pheatmap(t(heatmap_4), show_colnames = F, show_rownames = T, annotation =  )
+
+?pheatmap()
+
+
 
 
 
 
 ## Make a heat map of only disease associations
-heatmap_data4 <- matrix(0,nrow = 13, ncol = 13)
-rownames(heatmap_data4) <- c("adenomas_and_adenocarcinomas", "squamous_cell_neoplasms", "ductal_and_lobular_neoplasms", "cystic__mucinous_and_serous_neoplasms", "gliomas", "transitional_cell_papillomas_and_carcinomas", "nevi_and_melanomas", "complex_mixed_and_stromal_neoplasms"," myomatous_neoplasms", "plasma_cell_tumors", "complex_epithelial_neoplasms", "fibromatous_neoplasms", "mesothelial_neoplasms")
-colnames(heatmap_data4) <- c("adenomas_and_adenocarcinomas", "squamous_cell_neoplasms", "ductal_and_lobular_neoplasms", "cystic__mucinous_and_serous_neoplasms", "gliomas", "transitional_cell_papillomas_and_carcinomas", "nevi_and_melanomas", "complex_mixed_and_stromal_neoplasms"," myomatous_neoplasms", "plasma_cell_tumors", "complex_epithelial_neoplasms", "fibromatous_neoplasms", "mesothelial_neoplasms")
+heatmap_data5 <- matrix(0,nrow = 13, ncol = 13)
+rownames(heatmap_data5) <- c("adenomas_and_adenocarcinomas", "squamous_cell_neoplasms", "ductal_and_lobular_neoplasms", "cystic__mucinous_and_serous_neoplasms", "gliomas", "transitional_cell_papillomas_and_carcinomas", "nevi_and_melanomas", "complex_mixed_and_stromal_neoplasms"," myomatous_neoplasms", "plasma_cell_tumors", "complex_epithelial_neoplasms", "fibromatous_neoplasms", "mesothelial_neoplasms")
+colnames(heatmap_data5) <- c("adenomas_and_adenocarcinomas", "squamous_cell_neoplasms", "ductal_and_lobular_neoplasms", "cystic__mucinous_and_serous_neoplasms", "gliomas", "transitional_cell_papillomas_and_carcinomas", "nevi_and_melanomas", "complex_mixed_and_stromal_neoplasms"," myomatous_neoplasms", "plasma_cell_tumors", "complex_epithelial_neoplasms", "fibromatous_neoplasms", "mesothelial_neoplasms")
 
 diseases2 <- diseases[order(diseases[,1], decreasing = FALSE), ]
 
@@ -163,16 +196,36 @@ for (i in 1:nrow(diseases2)) {
 
 diseases3 <- cbind('id' = ids_vector, 'Disease' = diseases_list, 'Domain' = domains_vector)
 
-for (i in 1:nrow(heatmap_data4)) {
-  for (j in 1:ncol(heatmap_data4)) {
-    disease_of_interest <- rownames(heatmap_data4)[i]
+for (i in 1:nrow(heatmap_data5)) {
+  for (j in 1:ncol(heatmap_data5)) {
+    disease_of_interest <- rownames(heatmap_data5)[i]
     contains_disease <- grepl(disease_of_interest, diseases3[,2], fixed = TRUE)
     
-    disease_of_interest2 <- colnames(heatmap_data4)[j]
+    disease_of_interest2 <- colnames(heatmap_data5)[j]
     contains_both <- grepl(disease_of_interest2, diseases3[contains_disease, 2], fixed = TRUE)
-    heatmap_data4[i,j] <- sum(contains_both)
+    heatmap_data5[i,j] <- sum(contains_both)
   }
 }
 
-heatmap_cor <- cor(heatmap_data4, method = "spearman")
+heatmap_cor <- cor(heatmap_data5, method = "spearman")
 all_diseases <- pheatmap(t(heatmap_cor), show_colnames = T, show_rownames = T)  ##Heatmap of disease correlations
+
+
+## Heat map for ductal, cystic, adenomas, squamous
+pheatmap(t(heatmap_data)[c(-1), c(1,2,3, 4)], show_colnames = T, show_rownames = T)  ##Heatmap of disease correlations
+
+## Getting IDs of the diseases that cause the greatest number of diseases
+heatmap_data3
+hold_matrix <- as.data.frame(heatmap_data3)
+
+## For diseases that cause 10 diseases
+hold_matrix <- filter(hold_matrix, V1 == 10)
+mutations_10_diseases <- c(rownames(hold_matrix))
+
+hold_matrix2 <- as.data.frame(mutation_domains)
+getrows <- hold_matrix2[,1] %in% mutations_10_diseases
+getrows2 <- diseases[,1] %in% mutations_10_diseases
+
+m10_data <- hold_matrix2[getrows, ] ## Mutations that cause 10
+m10_data2 <- diseases[getrows2, ]   ## Gives specific amino acid changes
+
